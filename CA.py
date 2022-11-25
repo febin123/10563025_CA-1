@@ -7,7 +7,17 @@ class Employee:
         self.overtimeRate=overtimeRate
         self.weeklytaxcredit=weeklytaxcredit
 
-#creating objects of the class
-e1=Employee('febin',20,10,5,20)
 
-print(e1.weeklyhours)
+    #Created a method computeWeeklyPay (self,hours)
+    def computeWeeklyPay(self,hours):
+        computeWeeklyPay=(self.weeklyhours*self.rate)+(self.overtimeRate*hours)
+        print(computeWeeklyPay)
+
+
+
+#creating objects of the class
+e1=Employee('febin',35,11,15,20)
+
+#returning the computeWeekly pay
+e1.computeWeeklyPay(4)
+
