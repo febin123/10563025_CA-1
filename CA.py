@@ -18,7 +18,9 @@ class Employee:
     #Created a method computeWeeklyPay (self,hours)
     def computeWeeklyPay(self,hours):
         grossPay=(self.weeklyhours*self.rate)+(self.overtimeRate*hours)
-        
+
+        # grossPay=-20 tested negative value
+
           #checks the grosspay cannot be less than 0
         if(grossPay<0):
             raise ValueError('Value is negative; Please enter correct input')
@@ -31,6 +33,8 @@ class Employee:
     #craeted a method computeTax(self,grossPay) 
     def computeTax(self,grossPay):
         computeTax=(0.4*grossPay)-self.weeklytaxcredit
+
+        # computeTax=-20 tested negative value
 
          #checks the tax cannot be less than 0
         if(computeTax<0):
