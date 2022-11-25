@@ -10,14 +10,20 @@ class Employee:
 
     #Created a method computeWeeklyPay (self,hours)
     def computeWeeklyPay(self,hours):
-        computeWeeklyPay=(self.weeklyhours*self.rate)+(self.overtimeRate*hours)
-        print(computeWeeklyPay)
+        grossPay=(self.weeklyhours*self.rate)+(self.overtimeRate*hours)
+        print(grossPay)
 
 
+    #craeted a method computeTax(self,grossPay) 
+    def computeTax(self,grossPay):
+        computeTax=(0.4*grossPay)-self.weeklytaxcredit
+        print(computeTax)
 
 #creating objects of the class
-e1=Employee('febin',35,11,15,20)
+e1=Employee('febin',35,11,15,70)
 
-#returning the computeWeekly pay
+#returning the grosspay pay
 e1.computeWeeklyPay(4)
+
+e1.computeTax(grossPay=445)
 
