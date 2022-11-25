@@ -25,5 +25,6 @@ e1=Employee('febin',35,11,15,70)
 #returning the grosspay pay
 e1.computeWeeklyPay(4)
 
+#returns the tax due at 40% on the gross pay, reduced by the tax credit
 e1.computeTax(grossPay=445)
 
