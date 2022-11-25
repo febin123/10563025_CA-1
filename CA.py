@@ -7,6 +7,8 @@ class Employee:
         self.overtimeRate=overtimeRate
         self.weeklytaxcredit=weeklytaxcredit
 
+        if(overtimeRate<0):
+            raise ValueError('It cannot be less than 0')
 
     #Created a method computeWeeklyPay (self,hours)
     def computeWeeklyPay(self,hours):
@@ -20,7 +22,7 @@ class Employee:
         print(computeTax)
 
 #creating objects of the class
-e1=Employee('febin',35,11,15,70)
+e1=Employee('febin',35,11,-15,70)
 
 #returning the grosspay pay
 e1.computeWeeklyPay(4)
